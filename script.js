@@ -41,3 +41,10 @@ function downloadQR(){
         console.error(error);
     });
 }
+
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.getElementById("themeToggle");
+  body.classList.toggle("dark-mode");
+  btn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+}
