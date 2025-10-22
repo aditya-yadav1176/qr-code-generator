@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #262a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    width: 400px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.container h1{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 7px;
+}
+
+.container input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #494eea;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container button{
+    width: 100%;
+    height: 45px;
+    background-color: #494eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.container button:hover{
+    background-color: #373cd6;
+}
+
+.container #downloadBtn{
+    display: none;
+    margin-top: 7px;
+}
+
+#imgBox{
+    width: 60%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+#imgBox.show-img{
+    max-height: 300px;
+    border: 1px solid #ccc;
+}
+
+#imgBox img{
+    width: 100%;
+    padding: 7px;
+}
+
+.error{
+    animation: shake 0.1s linear 5;
+    border-color: red !important;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(2px);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* Mobile-friendly */
+@media (max-width: 480px){
+    .container{
+        width: 85vw;
+        padding: 5vw;
+    }
+
+    .container h1{
+        font-size: 6vw;
+        font-weight: 600;
+        margin-top: -0.5vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .container input{
+        height: 10vw;
+        padding: 1vw 2vw;
+        font-size: 4vw;
+        font-weight: 500;
+    }
+
+    .container button{
+        height: 12vw;
+        font-size: 5.3vw;
+        font-weight: 600;
+    }
+
+    .container #downloadBtn{
+        margin-top: 1vw;
+    }
+
+    #imgBox{
+        width: 75%;
+        margin: 2vw auto;
+    }
+
+    #imgBox img{
+        padding: 1.5vw;
+    }
+}
